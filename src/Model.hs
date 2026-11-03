@@ -1,22 +1,22 @@
 module Model where
 
-data Data = Data{ dia :: Int , mes :: Int , ano :: Int}
+data Datavalidade = Datavalidade{ dia :: Int , mes :: Int , ano :: Int}
 deriving(Show,Eq)
 
 data Produto = Produto{
-    nome :: String,
+    nomeProduto :: String,
     idproduto :: Int,
     categoria :: String,
     preco :: Double,
-    datavalidade :: Data,
+    datavalidade :: Datavalidade,
     quantidade :: Int
 }deriving (Show, Eq)
 
-data Utlizador = Utlizador{
-    nome :: String,
+data Utilizador = Utlizador{
+    nomeUtilizador :: String,
     idUtilizador :: Int,
-    Saldo :: Double
+    saldo :: Double
 }deriving(Show, Eq)
 
 produto1 :: Produto
-produto1 = Produto "Maça" 100 "Fruta" 1.00 (Data 02 12 2026) 50
+produto1 = Produto "Maça" 100 "Fruta" 1.00 (Datavalidade 02 12 2026) 50
