@@ -25,3 +25,6 @@ data Loja = Loja{
 
 produto1 :: Produto
 produto1 = Produto "Maça" 100 "Fruta" 1.00 (Datavalidade 02 12 2026) 50
+
+utilizador1 :: Utilizador
+utilizador1 = Utilizador "Ana" 1 100.0
