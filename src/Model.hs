@@ -18,5 +18,10 @@ data Utilizador = Utlizador{
     saldo :: Double
 }deriving(Show, Eq)
 
+data Loja = Loja{ 
+    produtos :: [Produto],
+    utilizadores :: [Utilizador]
+}deriving (Show, Eq)
+
 produto1 :: Produto
 produto1 = Produto "Maça" 100 "Fruta" 1.00 (Datavalidade 02 12 2026) 50
