@@ -28,3 +28,24 @@ vervalidade loja identificador =
             case idproduto x == identificador of
                 True -> show (datavalidade x)
                 False -> procurar xs
+
+atualizarstock :: Loja -> Int -> Int -> Loja
+atualizarstock loja identificador qtd =
+    loja { produtos = atualizar (produtos loja) }
+    where
+        atualizar [] = []
+
+        atualizar (x:xs) =
+            case idproduto x == identificador of
+                True -> x { quantidade = quantidade x + qtd } : xs
+                False -> x : atualizar xs
+verquantidade :: Loja -> Int -> Int
+verquantidade loja identificador =
+    procurar (produtos loja)
+    where
+        procurar [] = 0
+
+        procurar (x:xs) = 
+            case identificador == idproduto x of
+                True -> quantidade x
+                False -> procurar xs

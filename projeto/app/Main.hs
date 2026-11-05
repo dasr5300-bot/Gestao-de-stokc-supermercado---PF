@@ -11,7 +11,7 @@ main =
 
 executar :: Loja -> IO ()
 executar loja =
-    putStrLn "----Comandos---- \n--adicionarproduto\n--removerproduto\n--verstock\n--vervalidade\n--sair" >>
+    putStrLn "----Comandos---- \n-loja\n--adicionarproduto\n--removerproduto\n--vervalidade\n--verquantidade\n--verstock\n--atualizarstock\n--sair" >>
     getLine >>= \comando ->
     case comando of
         "sair" ->
@@ -54,5 +54,22 @@ executar loja =
             readLn >>= \identificador ->
             print (vervalidade loja identificador) >>
             executar loja
+        "verquantidade" ->
+            putStrLn "ID do produto a ver a quantidade " >>
+            readLn >>= \identificador ->
+            print (verquantidade loja identificador) >>
+            executar loja
+        "loja" ->
+            print loja >>
+            executar loja
+        "atualizarstock" ->
+            putStrLn "ID do produto a atualizar: " >>
+            readLn >>= \identificador ->
+            print (verquantidade loja identificador) >>
+            putStrLn "Quantidade a adicionar: " >>
+            readLn >>= \qtd ->
+            let novaLoja = atualizarstock loja identificador qtd
+            in putStrLn "Produto atualizado!" >>
+            executar novaLoja
         _ -> executar loja
         
