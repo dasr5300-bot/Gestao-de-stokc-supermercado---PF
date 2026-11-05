@@ -11,7 +11,7 @@ main =
 
 executar :: Loja -> IO ()
 executar loja =
-    putStrLn "----Comandos---- \n--adicionarproduto\n--removerproduto\n--verstock\n--sair" >>
+    putStrLn "----Comandos---- \n--adicionarproduto\n--removerproduto\n--verstock\n--vervalidade\n--sair" >>
     getLine >>= \comando ->
     case comando of
         "sair" ->
@@ -49,4 +49,10 @@ executar loja =
         "verstock" ->
             putStrLn (verStock (produtos loja)) >>
             executar loja
+        "vervalidade" ->
+            putStrLn "ID do produto a ver a validade:" >>
+            readLn >>= \identificador ->
+            print (vervalidade loja identificador) >>
+            executar loja
         _ -> executar loja
+        
