@@ -11,7 +11,7 @@
 Para carregar o módulo no terminal:
 ```bash
 cd projeto
-ghci src/Domain.hs
+ghci -isrc src/Domain.hs
 ```
 
 Comandos de teste no GHCi:
