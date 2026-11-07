@@ -49,3 +49,10 @@ verquantidade loja identificador =
             case identificador == idproduto x of
                 True -> quantidade x
                 False -> procurar xs
+
+lojaExemplo :: Loja
+lojaExemplo = Loja "Supermercado Exemplo"
+  [ Produto "Arroz Agulha" 1 "Mercearia" 1.15 (Datavalidade 15 12 2026) 30
+  , Produto "Leite Gordo"  2 "Laticinios" 0.85 (Datavalidade 20 11 2026) 12
+  , Produto "Maca Gala"    3 "Frutas"     1.49 (Datavalidade 10 11 2026) 5
+  ]

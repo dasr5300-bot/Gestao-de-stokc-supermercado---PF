@@ -1,5 +1,10 @@
 module Model where
 
+type ID = Int
+type Nome = String
+type Preco = Double
+type Quantidade = Int
+
 data Datavalidade = Datavalidade{ dia :: Int , mes :: Int , ano :: Int}deriving (Show,Eq)
 
 data Produto = Produto{
