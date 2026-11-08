@@ -42,3 +42,15 @@ projeto/
 └── docs/
  └── relatorio.pdf
 
+# Compilação
+Na pasta principal do projeto, executar:
+
+cabal build
+
+*Execução
+Depois de compilar, iniciar o programa com:
+
+cabal run projeto
+
+O programa pede o nome da loja e, em seguida, apresenta o menu de comandos. Para terminar, selecionar sair.
+
